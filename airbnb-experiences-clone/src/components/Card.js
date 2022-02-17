@@ -1,63 +1,29 @@
 import React from "react"
 import "../style.css"
-import swimmer from "../images/swimmer.png"
-import wedding from "../images/wedding.png"
-import bike from "../images/bike.png"
-import star from "../images/Star.png"
+import star from "../images/star.png"
 
-export default function Card() {
+
+export default function Card(props) {
+    let badgeText
+    if (props.item.openSpots === 0) {
+        badgeText = "SOLD OUT"
+    } else if (props.item.location === "Online") {
+        badgeText = "ONLINE"
+    }
+    
+
     return (
-        <div className="card-container">
-
-            <div className="card-section-container">
-                <img src={swimmer} className="card-container-img" />
-            
-
-                <div className="card-rating">
-                    <img src={star} className="card-rating-img" /> 
-                    <p>5.0</p>
-                    <p>(6)</p>
-                    <p>.</p>
-                    <p>USA</p>
-                </div>
-
-                <p className="card-paragraph">
-                 Life lessons with Katie Zaferes</p>
-
-                <p className="card-paragraph-price"><b>From $136</b> / person</p>
+        <div className="card">
+            {badgeText && <div className="card--badge">{badgeText}</div>}
+            <img src={props.item.coverImg} alt="coverImg" className="card--image" />
+            <div className="card--stats">
+                <img src={star}alt="star" className="card--star" />
+                <span>{props.item.stats.rating}</span>
+                <span className="gray">({props.item.stats.reviewCount}) • </span>
+                <span className="gray">{props.item.location}</span>
             </div>
-            
-
-            <div className="card-section-container">
-                <img src={wedding} className="card-container-img" />
-                <div className="card-rating">
-                        <img src={star} className="card-rating-img" /> 
-                        <p>5.0</p>
-                        <p>(30)</p>
-                        <p>.</p>
-                        <p>USA</p>
-                    </div>
-                    <p className="card-paragraph">
-                    Learn wedding photography</p>
-
-                <p className="card-paragraph-price"><b>From $125</b> / person</p>
-            </div>
-
-
-            <div className="card-section-container">
-            <img src={bike} className="card-container-img" />
-                <div className="card-rating">
-                        <img src={star} className="card-rating-img" /> 
-                        <p>4.8</p>
-                        <p>(2)</p>
-                        <p>.</p>
-                        <p>USA</p>
-                    </div>
-                    <p className="card-paragraph">
-                    Group Mountain Biking</p>
-
-                <p className="card-paragraph-price"><b>From $50</b> / person</p> 
-            </div>
+            <p className="card--title">{props.item.title}</p>
+            <p className="card--price"><span className="bold">From ${props.item.price}</span> / person</p>
         </div>
     )
 }
