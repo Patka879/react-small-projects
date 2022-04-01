@@ -1,5 +1,5 @@
 import React from "react"
-import "../style.css"
+    import "../style.css"
 import TrollFace from "../Images/Troll Face.svg"
 
 export default function Header () {
