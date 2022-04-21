@@ -1,12 +1,28 @@
 import React from 'react'
 import Dice from './Components/Dice'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {nanoid} from 'nanoid'
 import './style.css'
+import Confetti from 'react-confetti'
 
 export default function App() {
 
   const [dice, setDice] = useState(allNewDice())
+  const [tenzies, setTenzies] = useState(false)
+
+  // Winning conditions
+
+  useEffect(() => {
+    const allHeld = dice.every(die => die.isHeld)
+    const firstValue = dice[0].value
+    const allSameValue = dice.every(die => die.value === firstValue)
+    if (allHeld && allSameValue) {
+        setTenzies(true)
+        console.log("You won")
+    }
+}, [dice])
+
+  // Generating new die with value(1-6), isHeld and id
 
   function generateNewDie() {
     return {
@@ -15,6 +31,8 @@ export default function App() {
       id: nanoid()
       }
   }
+
+  // Generating new set of 10 dices 
 
   function allNewDice() {
     const newNumbers = []
@@ -25,6 +43,8 @@ export default function App() {
     return newNumbers
   }
 
+  // Changing the die when die is not held. If die is held it will stay the same.
+
   function shuffleDice() {
     setDice(prevDice => prevDice.map(die => {
       return die.isHeld ?
@@ -32,6 +52,8 @@ export default function App() {
         generateNewDie()
       }))
   }
+
+  // Changing isHeld to true when clicking on a die. It changes the color of a die.
 
   function holdDice(id) {
     setDice(oldDice => oldDice.map(die => {
@@ -47,12 +69,13 @@ export default function App() {
 
   return(
     <div className="main">
+        {tenzies && <Confetti />}
         <h1 className="title">Tenzies</h1>
         <h3 className="description">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</h3>
         <div className="dices">
            {diceElements}
         </div>
-        <button className="roll-button" onClick={shuffleDice}>Roll</button>
+        <button className="roll-button" onClick={shuffleDice}>{tenzies ? "New Game" : "Roll"}</button>
     </div>
 )
 }
