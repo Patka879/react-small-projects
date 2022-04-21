@@ -44,14 +44,20 @@ export default function App() {
   }
 
   // Changing the die when die is not held. If die is held it will stay the same.
+  // Starts New Game after wining
 
   function shuffleDice() {
-    setDice(prevDice => prevDice.map(die => {
-      return die.isHeld ?
-        die :
-        generateNewDie()
+    if(!tenzies) {
+      setDice(oldDice => oldDice.map(die => {
+          return die.isHeld ? 
+              die :
+              generateNewDie()
       }))
+  } else {
+      setTenzies(false)
+      setDice(allNewDice())
   }
+}
 
   // Changing isHeld to true when clicking on a die. It changes the color of a die.
 
