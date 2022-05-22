@@ -1,1 +1,1 @@
-Simple projects for react training
+Projects for react training
