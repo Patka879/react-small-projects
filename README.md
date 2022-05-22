@@ -1,1 +1,1 @@
-# react-small-projects
+Simple projects for react training
