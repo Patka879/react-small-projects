@@ -1,1 +1,1 @@
-Simple dice game
+Dice game
