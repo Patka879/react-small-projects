@@ -2,28 +2,34 @@ body {
   font-family: 'Karla', sans-serif;
   background-color: #0B2434;
   padding: 30px 20px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 400px;
+  justify-content: space-around;
+  height: 100vh;
   background-color: #F5F5F5;
-  margin: 28px 20px 28px 20px;
   border-radius: 5px;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 48px;
   font-weight: 700;
   text-align: center;
   color: #2B283A;
-  padding-top: 30px;
 }
 
 .description {
-  font-size: 18px;
+  font-size: 22px;
+  line-height: 40px;
   font-weight: 400;
   text-align: center;
   color: #4A4E74;
@@ -33,7 +39,7 @@ body {
 .dices {
   display: grid;
   gap: 20px;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto;
   margin-top: 15px;
   padding: 10px;
   flex-wrap: wrap;
@@ -54,10 +60,10 @@ body {
 }
 
 .roll-button {
-  font-size: 20px;
-  height: 50px;
-  width: 150px;
-  margin-top: 20px;
+  font-size: 30px;
+  height: 60px;
+  width: 180px;
+  margin: 20px 0 30px 0;
   background-color: #5035FF;
   border: none;
   border-radius: 5px;
@@ -67,6 +73,41 @@ body {
 
 .roll-button:active {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 910px) {
+  body {
+    padding: 0;
+  }
+  .main {
+    margin: 28px 20px 28px 20px;
+    height: 400px;
+    position: relative;
+      top: 95px;
+      left: 0;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .description {
+    font-size: 18px;
+  }
+  .dices {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto auto auto auto;
+  }
+  .roll-button {
+    font-size: 20px;
+    height: 50px;
+    width: 150px;
+    margin-top: 20px;
+    background-color: #5035FF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
 }
 
 
