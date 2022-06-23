@@ -28,6 +28,10 @@ export default function Meme() {
         }))   
     }
 
+    function saveMeme() {
+
+    }
+
     function handleChange(event) {
         const {name, value} = event.target
         setMeme(prevMeme => ({
@@ -57,8 +61,8 @@ export default function Meme() {
                     onChange={handleChange}  
                     />
                 <button 
-                onClick={getMemeImage}
-                className="form--button"
+                    onClick={getMemeImage}
+                    className="form--button"
                 >
                     Get a new meme image 
                 </button>
@@ -68,6 +72,12 @@ export default function Meme() {
                 <h2 className="meme--text-top">{meme.topText}</h2>
                 <h2 className="meme--text-bottom">{meme.bottomText}</h2>
             </div>
+            <button
+                    onClick={saveMeme}
+                    className="save--button"
+                >
+                    Save Your Meme
+            </button>
         </main>
     )
 }
