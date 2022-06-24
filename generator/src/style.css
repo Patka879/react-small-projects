@@ -16,10 +16,11 @@ main {
 
 .header {
   background-image: linear-gradient(#672280, #A626D3);
-  height: 60px;
+  height: 70px;
   color: white;
-  padding: 10px;
-  font-size: 24px;
+  padding-top: 20px;
+  font-size: 30px;
+  font-weight: 500;
   font-family: Karla, sans-serif;
   text-align: center;
 }
@@ -34,11 +35,12 @@ main {
 
 .form--input {
   font-family: "Karla", sans-serif;
+  font-size: 18px;
   border-radius: 5px;
   border: 1px solid #D5D4D8;
-  margin: 10px 0;
+  margin: 15px 0;
   height: 40px;
-  text-indent: 5px;
+  text-indent: 8px;
   box-shadow: 7px 6px 10px 1px rgba(0, 0, 0, 0.24);
 }
 
@@ -48,9 +50,11 @@ main {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  height: 30px;
-  margin-top: 10px;
+  height: 40px;
+  width: 93%;
+  margin: 30px 0;
   box-shadow: 7px 6px 10px 1px rgba(0, 0, 0, 0.24);
+  font-size: 18px;
 }
 
 .form--button:active, .save--button:active {
@@ -60,8 +64,7 @@ main {
 
 .meme--image {
   max-width: 93%; 
-  max-height: 200px;
-  min-height: 200px;
+  height: 220px;;
   position: relative; 
   left: 50%;
   transform: translateX(-50%);
@@ -70,6 +73,11 @@ main {
 
 .meme {
   position: relative;
+  background-color: rgba(242,242,244,1);
+  width: 93%;
+  height: 220px;
+  margin: 30px 0px;
+  border-radius: 10px;
 } 
 
 .meme--text-top, .meme--text-bottom {
@@ -106,11 +114,6 @@ main {
   top: 0px;
 }
 
-.save--button {
-  width: 92%;
-  margin: 20px 0 30px 0;
-}
-
 @media (min-width: 910px) {
   body {
     height: 100vh;
@@ -135,6 +138,7 @@ main {
   }
   .meme {
     position: relative;
+    height: 300px;  
   }
   .form--button, .save--button {
     background-image: linear-gradient(#8128a2, #bc5cdf);
@@ -143,8 +147,7 @@ main {
   }
   .meme--image {
     max-width: 100%; 
-    max-height: 400px;
-    min-height: 400px;
+    height: 300px;
   }
   .meme--text-top, .meme--text-bottom {
     font-size: 2em;
