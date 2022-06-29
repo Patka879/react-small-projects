@@ -1,12 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+let proxy = require('html2canvas-proxy')
+let express = require('express')
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-
+let app = express()
+app.use('/meme-images', proxy() )

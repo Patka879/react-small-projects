@@ -1,14 +1,15 @@
-import {useEffect, useState} from "react"
-
+import {useEffect, useState, useRef} from "react"
+import html2canvas from "html2canvas"
 
 export default function Meme() {
-
+    const printRef = useRef()
 
     const [meme, setMeme] = useState({
         topText: "",
         bottomText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg"
     })
+
 
     const [allMemes, setAllMemes] = useState([])
 
@@ -29,7 +30,29 @@ export default function Meme() {
     }
 
     function saveMeme() {
-        
+        (async () => {
+            const canvas = await html2canvas(printRef.current)
+
+            const data = canvas.toDataURL('image/jpg')
+            const link  = document.createElement('a')
+
+            if (typeof link.download === 'string') {
+                link.href = data
+                link.download = 'image.jpg'
+
+                document.body.appendChild(link)
+                link.click()           
+                document.body.removeChild(link)
+            } else {
+                window.open(data)
+            }
+        })()
+    
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            topText: "",
+            bottomText: ""
+        }))
     }
 
     function handleChange(event) {
@@ -62,12 +85,10 @@ export default function Meme() {
                     />
             </div>
             <button 
-                    onClick={getMemeImage}
-                    className="form--button"
-                >
-                    Get A New Image
-                </button>
-            <div className="meme">
+                onClick={getMemeImage}
+                className="form--button"
+            >Get A New Image</button>
+            <div ref={printRef} className="meme">
                 <img alt="random" src={meme.randomImage} className="meme--image" />
                 <h2 className="meme--text-top">{meme.topText}</h2>
                 <h2 className="meme--text-bottom">{meme.bottomText}</h2>
