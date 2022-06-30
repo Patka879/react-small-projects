@@ -1,17 +1,10 @@
 require('dotenv').config()
-const proxy = require('html2canvas-proxy')
 const express = require('express')
 const path = require('path')
 const request = require('request')
 
 let app = express()
-app.use(function(req, res, next) {
-    console.log("middleware", req.url)
-    next()
-})
 app.use('/meme-images',function(req, res) {
-    console.log(req.url)
-    console.log(req.query)
     request.get(req.query.url).pipe(res);
 })
   
