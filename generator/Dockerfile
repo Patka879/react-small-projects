@@ -13,6 +13,6 @@ ENV NODE_ENV production
 WORKDIR /app
 COPY . .
 RUN mkdir clientBuild
-COPY --from=builder /app/build /clientBuild/
+COPY --from=builder /app/build clientBuild/
 RUN npm ci
 CMD ["npm", "start"]
