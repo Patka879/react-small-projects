@@ -1,6 +1,6 @@
 FROM node:16 AS builder
 ENV NODE_ENV=production
-ENV API_PATH=/generator/api
+ENV REACT_APP_API_PATH=/generator/api
 # Add a work directory
 WORKDIR /app
 # Cache and Install dependencies
