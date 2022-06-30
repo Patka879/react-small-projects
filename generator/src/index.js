@@ -1,11 +1,13 @@
 require('dotenv').config()
 const express = require('express')
+const router = require('express').Router()
 const path = require('path')
 const request = require('request')
 const fs = require('fs')
 
 let app = express()
-app.use('/meme-images',function(req, res) {
+
+router.use('/meme-images',function(req, res) {
     request.get(req.query.url).pipe(res);
 })
   
@@ -17,7 +19,7 @@ if (process.env.NODE_ENV === "development") {
     app.use(express.static(path.join(__dirname, '../', 'clientBuild'))) 
 }
 
-app.get('/check-directories', function(req, res) {
+router.get('/check-directories', function(req, res) {
     const files = {}
     try {
         files['root'] = fs.readdirSync('/')
@@ -33,6 +35,8 @@ app.get('/check-directories', function(req, res) {
 
     res.json(files)
 })
+
+app.use('/api', router)
 
 let port = process.env.PORT || 80
 app.listen(port, () => {
