@@ -1,6 +1,6 @@
 FROM node:16 AS builder
-ENV NODE_ENV production
-ENV API_PATH /generator/api
+ENV NODE_ENV=production
+ENV API_PATH=/generator/api
 # Add a work directory
 WORKDIR /app
 # Cache and Install dependencies
@@ -10,7 +10,7 @@ RUN npm ci
 RUN npm run build
 
 FROM node:16 AS production
-ENV NODE_ENV production
+ENV NODE_ENV=production
 WORKDIR /app
 COPY . .
 COPY --from=builder /app/build clientBuild/
