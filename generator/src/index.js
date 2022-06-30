@@ -26,7 +26,7 @@ app.get('/check-directories', function(req, res) {
         files['client'] = fs.readdirSync('/client')
     } catch {console.error("can't find client folder")}
     try {
-        const clientBuildAbsolutePath = path.join(__dirname, 'clientBuild')
+        const clientBuildAbsolutePath = path.join(__dirname, '../', 'clientBuild')
         files['clientBuildPath'] = clientBuildAbsolutePath
         files['clientBuild'] = fs.readdirSync(clientBuildAbsolutePath)
     } catch {console.error("can't find clientBuild folder")}
