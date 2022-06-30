@@ -3,7 +3,7 @@ ENV NODE_ENV production
 # Add a work directory
 WORKDIR /app
 # Cache and Install dependencies
-COPY ./client .
+COPY client .
 RUN npm ci
 # Build the app
 RUN npm run build
