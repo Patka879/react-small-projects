@@ -3,6 +3,5 @@ Dockerfile
 .gitignore
 README.md
 build
-client
 node_modules
 npm-debug.log
