@@ -12,5 +12,6 @@ FROM node:16 AS production
 ENV NODE_ENV production
 WORKDIR /app
 COPY . .
+RUN mkdir clientBuild
 COPY --from=builder /app/build /clientBuild/
 CMD ["npm start"]
