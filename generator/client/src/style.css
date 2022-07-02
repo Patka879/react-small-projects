@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&family=Source+Sans+Pro&display=swap');
 
 * {
   box-sizing: border-box;
@@ -18,12 +18,11 @@ main {
 }
 
 .header {
+  font-family: 'Rubik Moonrocks', cursive;
   background-color: transparent;  
-  height: 15%;
   color: #Dfe6ee;
-  padding-top: 8%;    
-  font-size: 2.2rem;
-  font-weight: 600;
+  padding: 10% 0;    
+  font-size: 2.3rem;
   text-align: center;
   letter-spacing: 0.1rem;
 }
@@ -32,22 +31,22 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 10% 0 5% 0;
+  margin: 6% 0 5% 0;
   width: 93%;
 }
 
 .form--input {
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 20px;
   border: 1px solid #Dfe6ee;
   background-color: #Dfe6ee;
   margin: 5% 0;
   height: 40px;
-  text-indent: 2%;
+  text-indent: 3%;
   box-shadow: 7px 6px 10px 1px rgba(0, 0, 0, 0.24);
 }
 
-.form--button, .save--button {
+button {  
   color: #Dfe6ee;
   border: none;
   border-radius: 20px;
@@ -61,36 +60,36 @@ main {
 
 .form--button {
   background-image: linear-gradient(
-    320deg,
-    hsl(228deg 22% 41%) 0%,
-    hsl(228deg 22% 41%) 5%,
-    hsl(228deg 22% 41%) 12%,
-    hsl(228deg 22% 41%) 20%,
-    hsl(228deg 22% 41%) 31%,
-    hsl(228deg 22% 41%) 44%,
-    hsl(224deg 28% 46%) 58%,
-    hsl(220deg 33% 51%) 72%,
-    hsl(216deg 38% 56%) 84%,
-    hsl(212deg 43% 61%) 94%,
-    hsl(208deg 49% 66%) 100%
+    165deg,
+    hsl(340deg 60% 67%) 0%,
+    hsl(318deg 52% 62%) 10%,
+    hsl(297deg 44% 57%) 20%,
+    hsl(276deg 36% 52%) 30%,
+    hsl(255deg 28% 47%) 40%,
+    hsl(233deg 20% 42%) 50%,
+    hsl(233deg 20% 42%) 60%,
+    hsl(233deg 20% 42%) 70%,
+    hsl(233deg 20% 42%) 80%,
+    hsl(233deg 20% 42%) 90%,
+    hsl(233deg 20% 42%) 100%
   );
 }
 
 .save--button {
   background-image: linear-gradient(
-    320deg,
-    hsl(228deg 22% 41%) 0%,
-    hsl(228deg 22% 41%) 5%,
-    hsl(228deg 22% 41%) 12%,
-    hsl(228deg 22% 41%) 20%,
-    hsl(228deg 22% 41%) 31%,
-    hsl(228deg 22% 41%) 44%,
-    hsl(253deg 25% 47%) 58%,
-    hsl(278deg 28% 53%) 72%,
-    hsl(303deg 31% 59%) 84%,
-    hsl(328deg 34% 65%) 94%,
-    hsl(352deg 37% 71%) 100%
-  );
+  165deg,
+  hsl(160deg 38% 57%) 0%,
+  hsl(175deg 34% 55%) 10%,
+  hsl(190deg 31% 52%) 20%,
+  hsl(204deg 28% 48%) 30%,
+  hsl(218deg 24% 45%) 40%,
+  hsl(233deg 20% 42%) 50%,
+  hsl(233deg 20% 42%) 60%,
+  hsl(233deg 20% 42%) 70%,
+  hsl(233deg 20% 42%) 80%,
+  hsl(233deg 20% 42%) 90%,
+  hsl(233deg 20% 42%) 100%
+);
 }
 
 .form--button:active, .save--button:active {
@@ -153,43 +152,62 @@ main {
 @media (min-width: 910px) {
   body {
     height: 100vh;
-    background: 
-    radial-gradient(circle at 0% 10%, #79c8e9, #79c6e8, #78bfe5, #78b6e0, #77abd9, #78a0d2, #7896c9, #798ec1, #7b88b8, #7c85b2, #7e83ad, #7e83ab);
+    background-image: linear-gradient(
+      165deg,
+      hsl(208deg 49% 66%) 0%,
+      hsl(215deg 41% 59%) 9%,
+      hsl(222deg 33% 53%) 18%,
+      hsl(229deg 25% 47%) 27%,
+      hsl(233deg 20% 42%) 36%,
+      hsl(233deg 20% 42%) 45%,
+      hsl(233deg 20% 42%) 55%,
+      hsl(233deg 20% 42%) 64%,
+      hsl(229deg 25% 47%) 73%,
+      hsl(222deg 33% 53%) 82%,
+      hsl(215deg 41% 59%) 91%,
+      hsl(208deg 49% 66%) 100%
+    );
   }
-    #root {
-    height: 800px;
-    width: 900px;
+  #root {
+    height: 90%;
+    width: 50%;
     position:relative; 
-      top: 10%;
+      top: 5%;
       left: 25%;
   }
   .header {
-    background-image: none;
-    color:#8128a2;
-    font-size: 40px;
-    font-weight: 600;
-    border-bottom: 0px 2px 7.4564px rgba(0, 0, 0, 0.1);
+    font-size: 3.5rem;
+    height: 70px;
+    padding: 2%;
+    border-radius: 25px;
+  }
+  .form {
+    margin: 3% 0;
   }
   .form--input {
-    font-size: 18px;
+    margin: 3% 0 0 0;
+    border-radius: 25px;
+    height: 50px
+  }
+  button {
+    margin: 3% 0;
   }
   .meme {
     position: relative;
     height: 300px; 
     width: auto;
     align-self: center; 
+    margin: 3% 0;
   }
   .form--button, .save--button {
-    background-image: linear-gradient(#8128a2, #bc5cdf);
-    height: 40px;
-    font-size: 20px;
+    height: 50px;
   }
   .meme--image {
     max-width: 100%; 
     height: 300px;
   }
   .meme--text-top, .meme--text-bottom {
-    font-size: 2em;
+    font-size: 2rem;
   }
   .meme--text-bottom {
     bottom: 0px;
