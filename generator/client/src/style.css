@@ -77,19 +77,20 @@ button {
 
 .save--button {
   background-image: linear-gradient(
-  165deg,
-  hsl(160deg 38% 57%) 0%,
-  hsl(175deg 34% 55%) 10%,
-  hsl(190deg 31% 52%) 20%,
-  hsl(204deg 28% 48%) 30%,
-  hsl(218deg 24% 45%) 40%,
-  hsl(233deg 20% 42%) 50%,
-  hsl(233deg 20% 42%) 60%,
-  hsl(233deg 20% 42%) 70%,
-  hsl(233deg 20% 42%) 80%,
-  hsl(233deg 20% 42%) 90%,
-  hsl(233deg 20% 42%) 100%
-);
+    165deg,
+    hsl(160deg 38% 57%) 0%,
+    hsl(175deg 34% 55%) 10%,
+    hsl(190deg 31% 52%) 20%,
+    hsl(204deg 28% 48%) 30%,
+    hsl(218deg 24% 45%) 40%,
+    hsl(233deg 20% 42%) 50%,
+    hsl(233deg 20% 42%) 60%,
+    hsl(233deg 20% 42%) 70%,
+    hsl(233deg 20% 42%) 80%,
+    hsl(233deg 20% 42%) 90%,
+    hsl(233deg 20% 42%) 100%
+  );
+  margin-bottom: 8%;
 }
 
 .form--button:active, .save--button:active {
@@ -108,7 +109,6 @@ button {
 
 .meme {
   position: relative;
-  background-color: rgba(242,242,244,1);
   width: 93%;
   height: 220px;
   margin: 10% 0;
