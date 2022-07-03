@@ -65,40 +65,43 @@ export default function Meme() {
 
     return (
         <main>
-            <div className="form">
-                <input 
-                    type="text"
-                    placeholder="Top text..."
-                    className="form--input" 
-                    name="topText"
-                    value={meme.topText}
-                    onChange={handleChange}
-                    />
-                    
-                <input 
-                    type="text"
-                    placeholder="Bottom text..."
-                    className="form--input" 
-                    name="bottomText"
-                    value={meme.bottomText}  
-                    onChange={handleChange}  
-                    />
+            <div className="form-section">
+                <h1>Add Your Text Here:</h1>
+                <div className="form">
+                    <input 
+                        type="text"
+                        placeholder="Top text..."
+                        className="form--input" 
+                        name="topText"
+                        value={meme.topText}
+                        onChange={handleChange}
+                        />
+                        
+                    <input 
+                        type="text"
+                        placeholder="Bottom text..."
+                        className="form--input" 
+                        name="bottomText"
+                        value={meme.bottomText}  
+                        onChange={handleChange}  
+                        />
+                </div>
+                <button 
+                    onClick={getMemeImage}
+                    className="form--button"
+                >Get A New Image</button>
             </div>
-            <button 
-                onClick={getMemeImage}
-                className="form--button"
-            >Get A New Image</button>
-            <div ref={printRef} className="meme">
-                <img alt="random" src={meme.randomImage} className="meme--image" />
-                <h2 className="meme--text-top">{meme.topText}</h2>
-                <h2 className="meme--text-bottom">{meme.bottomText}</h2>
-            </div>
-            <button
+            <div className="image-section">
+                <div ref={printRef} className="meme">
+                    <img alt="random" src={meme.randomImage} className="meme--image" />
+                    <h2 className="meme--text-top">{meme.topText}</h2>
+                    <h2 className="meme--text-bottom">{meme.bottomText}</h2>
+                </div>
+                <button
                     onClick={saveMeme}
                     className="save--button"
-                >
-                    Save Your Meme
-            </button>
+                >Save Your Meme</button>
+            </div>
         </main>
     )
 }

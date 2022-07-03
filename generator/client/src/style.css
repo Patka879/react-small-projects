@@ -15,6 +15,18 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 3%;
+  width: 94%;
+}
+
+.form-section {
+  width: 100%;
+}
+
+h1 {
+  color:#Dfe6ee;
+  text-align: center;
+  font-size: 1.5em;
 }
 
 .header {
@@ -30,9 +42,7 @@ main {
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   margin: 4% 0 5% 0;
-  width: 93%;
 }
 
 .form--input {
@@ -46,13 +56,17 @@ main {
   box-shadow: 7px 6px 10px 1px rgba(0, 0, 0, 0.24);
 }
 
+.image-section {
+  width: 100%;
+}
+
 button {  
   color: #Dfe6ee;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   height: 40px;
-  width: 93%;
+  width: 100%;
   margin: 6% 0;
   box-shadow: 7px 6px 10px 1px rgba(0, 0, 0, 0.24);
   font-size: 1.2rem;
@@ -170,10 +184,25 @@ button {
   }
   #root {
     height: 90%;
-    width: 50%;
+    width: 60%;
     position:relative; 
       top: 5%;
-      left: 25%;
+      left: 20%;
+  }
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+  }
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2em;
+  }
+  .form-section{
+    justify-content: space-between;
+    width: 40%;
   }
   .header {
     font-size: 3.5rem;
@@ -182,19 +211,26 @@ button {
     border-radius: 25px;
   }
   .form {
-    margin: 3% 0;
+    margin: 10% 0;
+    width: 100%
   }
   .form--input {
-    margin: 3% 0 0 0;
+    margin: 10% 0 5% 0;
     border-radius: 25px;
-    height: 50px
+    height: 50px;
+    width: 100%;
   }
   button {
     margin: 3% 0;
+    width: 100%;
+  }
+  .image-section {
+    justify-content: center;
+    width: 46%
   }
   .meme {
     position: relative;
-    height: 300px; 
+    height: 400px; 
     width: auto;
     align-self: center; 
     margin: 3% 0;
@@ -207,7 +243,7 @@ button {
     height: 300px;
   }
   .meme--text-top, .meme--text-bottom {
-    font-size: 2rem;
+    font-size: 1.2em;
   }
   .meme--text-bottom {
     bottom: 0px;
