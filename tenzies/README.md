@@ -12,7 +12,7 @@ Project is created with:
 ## Setup 
 Life version of the application is available in my portfolio: https://patrycjamysiak.pl/tenzies/
 <br><br><br>
-To start this project localy:
+To start this project locally:
 
 Clone the repository:
 ```
