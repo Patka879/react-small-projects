@@ -4,6 +4,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Acknowledgement](#acknowledgement)
 ## General info
 This projects was creted as a part of React.js course. Later, the option to save the generated image was added and the application styles were changed. In order to generate images, the application uses an external API, and the entire project was created using react.js
 ## Technologies
@@ -23,6 +24,6 @@ $ npm run start:dev
 $ cd client
 $ npm run start
 ```
-## Inspiration
-This app is based on freecodecamp Scrimba course https://scrimba.com/learn/learnreact
-
+## Acknowledgement
+Inspiration: This app is based on freecodecamp Scrimba course https://scrimba.com/learn/learnreact<br>
+Many thanks to <b>Mateusz Mysiak</b> for helping with backend: https://github.com/mmsmsy
