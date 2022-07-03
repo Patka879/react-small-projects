@@ -235,7 +235,7 @@ button {
   }
   .meme {
     position: relative;
-    height: 420px; 
+    height: 360px; 
     width: auto;
     align-self: center; 
     margin: 3% 0;
@@ -245,10 +245,10 @@ button {
   }
   .meme--image {
     max-width: 100%; 
-    height: 420px;
+    height: 360px;
   }
   .meme--text-top, .meme--text-bottom {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
   .meme--text-bottom {
     bottom: 0px;
