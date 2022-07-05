@@ -131,7 +131,7 @@ button {
 
 .meme--text-top, .meme--text-bottom {
   position: absolute;
-  max-width: 90%;
+  min-width: 90%;
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
@@ -141,7 +141,7 @@ button {
   font-size: 0.8rem;
   text-transform: uppercase;
   color: white;
-  letter-spacing: 1px;
+  letter-spacing: 2.2px;
   z-index: 10;
   text-shadow:
     2px 2px 0 #000,
