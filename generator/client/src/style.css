@@ -131,7 +131,7 @@ button {
 
 .meme--text-top, .meme--text-bottom {
   position: absolute;
-  max-width: 80%;
+  max-width: 90%;
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
@@ -249,7 +249,6 @@ button {
   }
   .meme--text-top, .meme--text-bottom {
     font-size: 1.4em;
-    width:  90%;
   }
   .meme--text-bottom {
     bottom: 0px;
