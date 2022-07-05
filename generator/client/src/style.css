@@ -249,6 +249,7 @@ button {
   }
   .meme--text-top, .meme--text-bottom {
     font-size: 1.4em;
+    width:  90%;
   }
   .meme--text-bottom {
     bottom: 0px;
