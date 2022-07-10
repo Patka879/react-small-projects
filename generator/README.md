@@ -20,6 +20,7 @@ Life version of the application is available in my portfolio: https://patrycjamy
 
 To start this project locally:
 ```
+$ npm ci
 $ npm run start:dev
 $ cd client
 $ npm run start
